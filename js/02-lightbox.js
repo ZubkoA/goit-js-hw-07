@@ -7,7 +7,7 @@ galleryWrapEl.insertAdjacentHTML("beforeend", cardsImg);
 
 function creatImgCards(galleryItems) {
   return galleryItems
-    .map(({ preview, original, description }) => {
+    .map(({ preview, original }) => {
       return `
       <div class="gallery__item">
     <a class="gallery__item" href="${original}">
@@ -18,4 +18,5 @@ function creatImgCards(galleryItems) {
     })
     .join("");
 }
-let galleryIMG = new SimpleLightbox(".gallery a");
+const galleryIMG = new SimpleLightbox(".gallery a");
+console.log(galleryIMG);
